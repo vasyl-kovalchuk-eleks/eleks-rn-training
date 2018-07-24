@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { NavigationActions } from 'react-navigation';
 
 import { RootNavigator } from '../navigators/AppNavigator';

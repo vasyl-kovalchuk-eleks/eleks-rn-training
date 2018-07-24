@@ -2,65 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cffa4108-4293-4d0f-9dca-00bd43cf8d13" name="Default" comment="- add bootstrapped source under the git&#10;- add google services(firebase project details)">
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/.babelrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/.buckconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/.flowconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/.gitattributes" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/.watchmanconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/App.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/App.test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/BUCK" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/build.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/google-services.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/proguard-rules.pro" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/AndroidManifest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/java/com/eleks/rntrainingtest/MainActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/java/com/eleks/rntrainingtest/MainApplication.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/res/values/strings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/app/src/main/res/values/styles.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/build.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/gradle.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/gradle/wrapper/gradle-wrapper.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/gradle/wrapper/gradle-wrapper.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/gradlew" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/gradlew.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/keystores/BUCK" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/keystores/debug.keystore.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/android/settings.gradle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/app.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/assets/RNFirebase.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/bin/rename.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/GoogleService-Info.plist" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/Podfile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/Podfile.lock" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest-tvOS/Info.plist" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest-tvOSTests/Info.plist" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest.xcodeproj/project.pbxproj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest.xcodeproj/xcshareddata/xcschemes/rntrainingtest-tvOS.xcscheme" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest.xcodeproj/xcshareddata/xcschemes/rntrainingtest.xcscheme" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest.xcworkspace/contents.xcworkspacedata" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest/AppDelegate.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest/AppDelegate.m" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest/Base.lproj/LaunchScreen.xib" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest/Images.xcassets/AppIcon.appiconset/Contents.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest/Info.plist" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtest/main.m" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtestTests/Info.plist" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/ios/rntrainingtestTests/rntrainingtestTests.m" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/package.json" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/src/constants/navigation.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/packages/topic-5/src/containers/AuthButton.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/App.js" afterPath="$PROJECT_DIR$/packages/topic-5/App.js" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/package-lock.json" afterPath="$PROJECT_DIR$/packages/topic-5/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/package.json" afterPath="$PROJECT_DIR$/packages/topic-5/package.json" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/src/components/AuthButton.js" afterPath="$PROJECT_DIR$/packages/topic-5/src/components/AuthButton.js" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/src/components/LoginScreen.js" afterPath="$PROJECT_DIR$/packages/topic-5/src/containers/LoginScreen.js" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/src/components/LoginStatusMessage.js" afterPath="$PROJECT_DIR$/packages/topic-5/src/containers/LoginStatusMessage.js" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/src/components/MainScreen.js" afterPath="$PROJECT_DIR$/packages/topic-5/src/containers/MainScreen.js" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/src/components/ProfileScreen.js" afterPath="$PROJECT_DIR$/packages/topic-5/src/containers/ProfileScreen.js" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/src/navigators/AppNavigator.js" afterPath="$PROJECT_DIR$/packages/topic-5/src/navigators/AppNavigator.js" />
+      <change beforePath="$PROJECT_DIR$/packages/topic-5/src/reducers/nav.js" afterPath="$PROJECT_DIR$/packages/topic-5/src/reducers/nav.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,8 +26,148 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/reducers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginStatusMessage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/LoginStatusMessage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthButton.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/AuthButton.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthButton.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/components/AuthButton.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/constants/navigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/reducers/nav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppNavigator.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/navigators/AppNavigator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/reducers/auth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/LoginScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/packages/topic-5/src/reducers/nav.js" />
+        <option value="$PROJECT_DIR$/packages/topic-5/src/constants/navigation.js" />
+        <option value="$PROJECT_DIR$/packages/topic-5/src/navigators/AppNavigator.js" />
+        <option value="$PROJECT_DIR$/packages/topic-5/src/components/AuthButton.js" />
+        <option value="$PROJECT_DIR$/packages/topic-5/src/containers/AuthButton.js" />
+        <option value="$PROJECT_DIR$/packages/topic-5/src/actions.js" />
+        <option value="$PROJECT_DIR$/packages/topic-5/App.js" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
@@ -126,6 +220,13 @@
               <item name="packages" type="462c0819:PsiDirectoryNode" />
               <item name="topic-5" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RNTraining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RNTrainings" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="topic-5" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -135,6 +236,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/topic-5/src/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/topic-5/src/containers/screens" />
+      <recent name="$PROJECT_DIR$/packages/topic-5/src/containers" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -147,6 +258,22 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="android" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/packages/topic-5/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="android" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="npm.android" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -163,31 +290,42 @@
       <updated>1532457594275</updated>
       <workItem from="1532457595800" duration="273000" />
     </task>
+    <task id="LOCAL-00001" summary="- add simple integration with redux and react navigation">
+      <created>1532460477284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532460477284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273000" />
+    <option name="totallyTimeSpent" value="1972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38412017" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.48954704" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.510453" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -200,10 +338,163 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- add bootstrapped source under the git&#10;- add google services(firebase project details)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- add bootstrapped source under the git&#10;- add google services(firebase project details)" />
+    <MESSAGE value="- add simple integration with redux and react navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="- add simple integration with redux and react navigation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/MainScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/ProfileScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/reducers/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/reducers/nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/constants/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/components/AuthButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/AuthButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="50" lean-forward="false" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/LoginScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/containers/LoginStatusMessage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/src/navigators/AppNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/topic-5/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

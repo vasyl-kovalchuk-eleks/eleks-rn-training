@@ -1,14 +1,33 @@
 import React from 'react';
-import { YellowBox } from 'react-native';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 
 import AppReducer from './src/reducers';
-import { AppNavigator, middleware } from './src/navigators/AppNavigator';
+import { AppNavigator, middleware as navigationMiddleware } from './src/navigators/AppNavigator';
 
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+const middlewares = [
+  thunk,
+  navigationMiddleware,
+];
 
-const store = createStore(AppReducer, applyMiddleware(middleware));
+if (__DEV__) {
+  console.ignoredYellowBox = ['Setting a timer'];
+  // eslint-disable-next-line
+  const logger = createLogger({
+    duration: true,
+    collapsed: true,
+  });
+  middlewares.push(logger);
+}
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  AppReducer,
+  composeEnhancers(applyMiddleware(...middlewares))
+);
 
 const App = () => (<Provider store={store}>
   <AppNavigator/>
