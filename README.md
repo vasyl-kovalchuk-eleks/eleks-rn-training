@@ -9,11 +9,11 @@ By the end of the this courses, you’ll be able to build professional Android a
 
 ## Table of contents
 
-* [Introduction and Getting Started]
-** Welcome
-** Is this course for you?
-** Course overview
-** Why React Native?
+** [Getting Started]
+** [Redux & navigation]
+** [Diving into basic]
+** [Native Modules & Features]
+** [Firebase]
 ** Requirement and setup
     
 ## Examples and Sources
@@ -25,4 +25,8 @@ By the end of the this courses, you’ll be able to build professional Android a
 * [Getting Started with React Native](https://www.packtpub.com/application-development/getting-started-react-native?utm_source=GitHub&utm_medium=repo&utm_campaign=9781785885181)
 * [React Native: примеры, компоненты, туториалы и книги](https://apptractor.ru/info/articles/react-native-primeryi-komponentyi-tutorialyi-i-knigi.html)
 
-[Introduction and Getting Started]: packages/module-1/README.md
+[Getting Started]: packages/topic-1/README.md
+[Redux & navigation]: packages/topic-2/README.md
+[Diving into basic]: packages/topic-3/README.md
+[Native Modules & Features]: packages/topic-4/README.md
+[Firebase]: packages/topic-5/README.md
