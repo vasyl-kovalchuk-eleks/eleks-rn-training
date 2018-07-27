@@ -1,24 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStackNavigator } from 'react-navigation';
+import { createSwitchNavigator } from 'react-navigation';
 import { createReactNavigationReduxMiddleware, reduxifyNavigator, } from 'react-navigation-redux-helpers';
-
-import * as routes from '../constants/navigation';
-
-import LoginScreen from '../containers/LoginScreen';
-import MainScreen from '../containers/MainScreen';
-import ProfileScreen from '../containers/ProfileScreen';
-
+import UnauthorizedNavigator from "./UnauthorizedNavigator";
+import AuthorizedNavigator from "./AuthorizedNavigator";
 
 const middleware = createReactNavigationReduxMiddleware(
   'root',
   state => state.nav
 );
 
-const RootNavigator = createStackNavigator({
-  [routes.LOGIN]: { screen: LoginScreen },
-  [routes.MAIN]: { screen: MainScreen },
-  [routes.PROFILE]: { screen: ProfileScreen },
+const RootNavigator = createSwitchNavigator({
+  UnauthorizedNavigation: UnauthorizedNavigator,
+  AuthorizedNavigation: AuthorizedNavigator,
 });
 
 const AppWithNavigationState = reduxifyNavigator(RootNavigator, 'root');

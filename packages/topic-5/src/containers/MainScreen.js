@@ -1,27 +1,54 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import React from 'react'
+import { NavigationActions, StackActions } from 'react-navigation'
+import { Button, Image, Platform, StyleSheet, Text, View } from 'react-native'
+import firebase from 'react-native-firebase';
 
-import LoginStatusMessage from './LoginStatusMessage';
-import AuthButton from './AuthButton';
+import { connect } from 'react-redux'
+
+import * as MESSAGE from '../constants/message'
+import { logout } from "../actions/auth";
+
+class MainScreen extends React.Component {
+  state = { currentUser: null };
+
+  componentDidMount() {
+    const { currentUser } = firebase.auth();
+
+    this.setState({ currentUser })
+  }
+
+  render() {
+    const { currentUser } = this.state;
+
+    return (
+      <View style={styles.container}>
+        <Text>
+          Hi {currentUser && currentUser.email}!
+        </Text>
+        <Button onPress={this.props.logout} title={MESSAGE.LOGOUT}/>
+      </View>
+    )
+  }
+};
+
+MainScreen.navigationOptions = {
+  title: MESSAGE.HOME,
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
+    alignItems: 'center'
+  }
 });
 
-const MainScreen = () => (
-  <View style={styles.container}>
-    <LoginStatusMessage />
-    <AuthButton />
-  </View>
-);
+const mapStateToProps = () => ({
 
-MainScreen.navigationOptions = {
-  title: 'Home Screen',
+});
+
+const mapDispatchToProps = {
+  logout
 };
 
-export default MainScreen;
+export default connect(mapStateToProps, mapDispatchToProps)(MainScreen)

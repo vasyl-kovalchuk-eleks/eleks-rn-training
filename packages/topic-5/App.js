@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, compose, createStore } from 'redux';
 
 import AppReducer from './src/reducers';
-import { AppNavigator, middleware as navigationMiddleware } from './src/navigators/AppNavigator';
+import { AppNavigator, middleware as navigationMiddleware } from './src/navigators';
 
 const middlewares = [
   thunk,

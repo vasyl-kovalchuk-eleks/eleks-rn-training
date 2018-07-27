@@ -1,28 +1,26 @@
-import { NavigationActions } from 'react-navigation';
+import { NavigationActions, StackActions } from 'react-navigation';
 
-import { RootNavigator } from '../navigators/AppNavigator';
+import { RootNavigator } from '../navigators/index';
+import { AUTH_LOGIN_SUCCESS, AUTH_LOGOUT } from "../constants/actionTypes";
+import { LOGIN_SCREEN, MAIN_SCREEN } from "../constants/navigation";
 
-// Start with two routes: The Main screen, with the Login screen on top.
-const firstAction = RootNavigator.router.getActionForPathAndParams('Main');
-const tempNavState = RootNavigator.router.getStateForAction(firstAction);
-const secondAction = RootNavigator.router.getActionForPathAndParams('Login');
-const initialNavState = RootNavigator.router.getStateForAction(
-  secondAction,
-  tempNavState
-);
+const initNavState = RootNavigator.router.getStateForAction({});
 
-function nav(state = initialNavState, action) {
+function nav(state = initNavState, action = {}) {
   let nextState;
   switch (action.type) {
-    case 'Login':
+    case AUTH_LOGIN_SUCCESS:
       nextState = RootNavigator.router.getStateForAction(
-        NavigationActions.back(),
+        StackActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({ routeName: MAIN_SCREEN })],
+        }),
         state
       );
       break;
-    case 'Logout':
+    case AUTH_LOGOUT:
       nextState = RootNavigator.router.getStateForAction(
-        NavigationActions.navigate({ routeName: 'Login' }),
+        NavigationActions.navigate({ routeName: LOGIN_SCREEN }),
         state
       );
       break;
