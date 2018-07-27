@@ -29,8 +29,10 @@ const store = createStore(
   composeEnhancers(applyMiddleware(...middlewares))
 );
 
-const App = () => (<Provider store={store}>
-  <AppNavigator/>
-</Provider>);
+const App = () => (
+  <Provider store={store}>
+    <AppNavigator/>
+  </Provider>
+);
 
 export default App;

@@ -4,7 +4,10 @@ import * as routes from "../constants/navigation";
 import MainScreen from "../containers/MainScreen";
 
 export default createStackNavigator({
-  [routes.MAIN_SCREEN]: { screen: MainScreen },
+  [routes.MAIN_SCREEN]: {
+    screen: MainScreen,
+    path: 'mainScreen',
+  },
   [routes.PROFILE_SCREEN]: { screen: ProfileScreen },
 }, {
   initialRouteName: routes.MAIN_SCREEN
