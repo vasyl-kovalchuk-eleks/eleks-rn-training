@@ -9,7 +9,7 @@ import { signUpNewUser } from "../actions/auth";
 import { SIGN_UP, SUBMIT } from "../constants/message";
 
 const SignUpForm = props => {
-  const { handleSubmit, onSubmit, submitting, invalid } = props;
+  const { handleSubmit, onSubmit, submitting, invalid, submitFailed, error } = props;
 
   return (
     <View style={styles.container}>
@@ -40,8 +40,8 @@ const SignUpForm = props => {
            <Text style={styles.button}>{SUBMIT}</Text>
           {submitting && <ActivityIndicator size="small" />}
         </TouchableOpacity>
+        {submitFailed && <Text style={[styles.errorText]}>{error}</Text>}
       </View>
-
     </View>
   )
 };
@@ -69,7 +69,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     height: 37,
     marginTop: 20
-  }
+  },
+  errorText: {
+    marginTop: 20,
+    fontSize: 14,
+    alignSelf: 'center',
+    color: 'red',
+    backgroundColor: 'transparent',
+  },
 });
 
 const mapDispatchToProps = dispatch => ({

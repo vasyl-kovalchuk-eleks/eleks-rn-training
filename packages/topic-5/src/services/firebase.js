@@ -7,7 +7,7 @@ export const firebaseDb = firebase.database();
 
 export const createUser = (email, password) =>
   firebase.auth()
-    .createUserWithEmailAndPassword(email, password);
+    .createUserAndRetrieveDataWithEmailAndPassword(email, password);
 
 export const signIn = (email, password) =>
   firebase.auth()

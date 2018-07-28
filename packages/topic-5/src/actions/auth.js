@@ -41,7 +41,7 @@ export const logout = () => dispatch => {
 
 export const signUpNewUser = ({email, password}) => dispatch => {
   return firebaseService.createUser(email, password)
-    .then(user => {
+    .then(({user}) => {
       if (!user.emailVerified) {
         user.sendEmailVerification();
       }
@@ -49,5 +49,5 @@ export const signUpNewUser = ({email, password}) => dispatch => {
       dispatch(StackActions.push(MAIN_SCREEN));
 
       firebaseService.requestAndSaveUserPushToken(user.uid);
-    })
+    });
 };

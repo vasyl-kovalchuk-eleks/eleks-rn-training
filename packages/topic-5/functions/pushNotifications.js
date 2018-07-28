@@ -11,7 +11,7 @@ exports.sendPushNotification = functions.database.ref('/users/{uid}/pushToken')
       const payload = {
         notification: {
           title: 'Firebase Notification',
-          body: `Dear ${user.displayName}! \nYou have been successfully registered!`,
+          body: `Dear ${user.displayName}! \nYou have been successfully registered! \n Click the following link: https://rntrainingtest.page.link/welcome`,
           sound: 'default',
           badge: '1'
         }
