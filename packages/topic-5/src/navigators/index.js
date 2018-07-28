@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createSwitchNavigator } from 'react-navigation';
 import { createReactNavigationReduxMiddleware, reduxifyNavigator, } from 'react-navigation-redux-helpers';
-import { Platform } from "react-native";
 
 import UnauthorizedNavigator from "./UnauthorizedNavigator";
 import AuthorizedNavigator from "./AuthorizedNavigator";
@@ -17,7 +16,6 @@ const RootNavigator = createSwitchNavigator({
   AuthorizedNavigation: AuthorizedNavigator,
 });
 
-const APP_PREFIX = Platform.OS === 'android' ? 'rntrainingtest://rntrainingtest/' : 'rntrainingtest://';
 const AppWithNavigationState = reduxifyNavigator(RootNavigator, 'root');
 
 const mapStateToProps = state => ({
