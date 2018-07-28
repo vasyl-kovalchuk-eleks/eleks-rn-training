@@ -1,5 +1,7 @@
 'use strict';
 
+import { getUsersPath } from "../src/utils/firebasePathes";
+
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
@@ -17,7 +19,7 @@ exports.createUser = functions.auth.user().onCreate(user => {
     photoUrl: user.photoURL,
   };
 
-  return admin.database().ref('/users/' + user.uid).set(userObject);
+  return admin.database().ref(getUsersPath(user.uid)).set(userObject);
 });
 // [END createUser]
 

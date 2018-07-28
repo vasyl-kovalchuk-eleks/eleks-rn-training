@@ -8,6 +8,8 @@ import { renderInput } from "../components/formFields";
 import { signUpNewUser } from "../actions/auth";
 import { SIGN_UP, SUBMIT } from "../constants/message";
 
+const required = value => value ? undefined : 'Required';
+
 const SignUpForm = props => {
   const { handleSubmit, onSubmit, submitting, invalid, submitFailed, error } = props;
 
@@ -22,6 +24,7 @@ const SignUpForm = props => {
           component={renderInput}
           testID="email"
           accessibilityLabel="email"
+          validate={required}
         />
         <Field
           autoFocus
@@ -33,6 +36,7 @@ const SignUpForm = props => {
           testID="password"
           accessibilityLabel="password"
           autoCapitalize="none"
+          validate={required}
         />
         <TouchableOpacity
           disabled={submitting || invalid}

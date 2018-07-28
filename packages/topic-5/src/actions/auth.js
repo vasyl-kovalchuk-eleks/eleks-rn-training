@@ -39,15 +39,6 @@ export const logout = () => dispatch => {
     .then(() => dispatch({type: AUTH_LOGOUT}))
 };
 
-export const signUpNewUser = ({email, password}) => dispatch => {
-  return firebaseService.createUser(email, password)
-    .then(({user}) => {
-      if (!user.emailVerified) {
-        user.sendEmailVerification();
-      }
-
-      dispatch(StackActions.push(MAIN_SCREEN));
-
-      firebaseService.requestAndSaveUserPushToken(user.uid);
-    });
+export const signUpNewUser = ({email, password}) => () => {
+  return firebaseService.createUser(email, password);
 };

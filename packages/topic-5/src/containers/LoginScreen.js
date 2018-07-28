@@ -10,8 +10,10 @@ import { compose } from 'redux';
 import { renderInput } from "../components/formFields";
 import { login } from "../actions/auth";
 
+const required = value => value ? undefined : 'Required';
+
 const LoginForm = props => {
-  const { handleSubmit, onSubmit, submitting, onSignUpPress, submitFailed, error } = props;
+  const { handleSubmit, onSubmit, submitting, invalid, onSignUpPress, submitFailed, error } = props;
 
   return (
     <View style={styles.container}>
@@ -24,6 +26,7 @@ const LoginForm = props => {
           component={renderInput}
           testID="email"
           accessibilityLabel="email"
+          validate={required}
         />
         <Field
           autoFocus
@@ -35,13 +38,14 @@ const LoginForm = props => {
           testID="password"
           accessibilityLabel="password"
           autoCapitalize="none"
+          validate={required}
         />
 
         <View style={{flex: 1, flexDirection: 'column',} }>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
             <TouchableOpacity
               style={[styles.button, styles.loadingButton]}
-              disabled={submitting}
+              disabled={invalid || submitting}
               onPress={handleSubmit(onSubmit)}>
               <Text style={styles.buttonText}>{SIGN_IN}</Text>
               {submitting && <ActivityIndicator style={styles.loadingIndicator} size='small'/>}
