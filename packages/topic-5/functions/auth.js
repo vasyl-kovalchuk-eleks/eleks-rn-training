@@ -8,19 +8,16 @@ const admin = require('firebase-admin');
  * Store user profile.
  */
 // [START onCreateTrigger]
-exports.createUser = functions.auth.user().onCreate((event) => {
+exports.createUser = functions.auth.user().onCreate(user => {
   // [END onCreateTrigger]
   // send an email;
-  const user = event.data || event;
-
   const userObject = {
-    displayName: user.displayName,
+    displayName: user.email.split('@')[0],
     email: user.email,
     photoUrl: user.photoURL,
-    createdOn: user.metadata.createdAt
   };
 
-  return admin.database().ref('users').child(user.uid).set(userObject);
+  return admin.database().ref('/users/' + user.uid).set(userObject);
 });
 // [END createUser]
 
