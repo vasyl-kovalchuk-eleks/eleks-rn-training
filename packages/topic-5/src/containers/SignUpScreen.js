@@ -9,7 +9,7 @@ import { signUpNewUser } from "../actions/auth";
 import { SIGN_UP, SUBMIT } from "../constants/message";
 
 const SignUpForm = props => {
-  const { handleSubmit, onSubmit, submitting } = props;
+  const { handleSubmit, onSubmit, submitting, invalid } = props;
 
   return (
     <View style={styles.container}>
@@ -35,12 +35,10 @@ const SignUpForm = props => {
           autoCapitalize="none"
         />
         <TouchableOpacity
-          disabled={submitting}
+          disabled={submitting || invalid}
           onPress={handleSubmit(onSubmit)}>
-          {submitting
-            ? <ActivityIndicator size="small" />
-            : <Text style={styles.button}>{SUBMIT}</Text>
-          }
+           <Text style={styles.button}>{SUBMIT}</Text>
+          {submitting && <ActivityIndicator size="small" />}
         </TouchableOpacity>
       </View>
 
@@ -55,7 +53,7 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     height: 40,
     padding: 5,
-    marginTop: 20,
+    marginTop: 30,
     textAlign: 'center',
   },
   container: {

@@ -27,7 +27,7 @@ const LoginForm = props => {
         />
         <Field
           autoFocus
-          secureTextEntry
+          secureTextEntry={true}
           name="password"
           placeholder='Enter Password'
           placeholderTextColor='grey'
@@ -36,23 +36,24 @@ const LoginForm = props => {
           accessibilityLabel="password"
           autoCapitalize="none"
         />
-        <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
-          <TouchableOpacity
-            style={{width: 100}}
-            disabled={submitting}
-            onPress={handleSubmit(onSubmit)}>
-            {submitting
-              ? <ActivityIndicator size="small" />
-              : <Text style={styles.button}>{SIGN_IN}</Text>
-            }
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{width: 100}}
-            onPress={onSignUpPress}>
-              <Text style={styles.button}>{SIGN_UP}</Text>
-          </TouchableOpacity>
+
+        <View style={{flex: 1, flexDirection: 'column',} }>
+          <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
+            <TouchableOpacity
+              style={[styles.button, styles.loadingButton]}
+              disabled={submitting}
+              onPress={handleSubmit(onSubmit)}>
+              <Text style={styles.buttonText}>{SIGN_IN}</Text>
+              {submitting && <ActivityIndicator style={styles.loadingIndicator} size='small'/>}
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={onSignUpPress}>
+              <Text style={styles.buttonText}>{SIGN_UP}</Text>
+            </TouchableOpacity>
+          </View>
+          {submitFailed && <Text style={[styles.errorText]}>{error}</Text>}
         </View>
-        {submitFailed && <Text style={styles.text}>{error}</Text>}
       </View>
     </View>
   )
@@ -60,13 +61,23 @@ const LoginForm = props => {
 
 const styles = StyleSheet.create({
   button: {
+    width: 100,
     backgroundColor: 'blue',
-    color: 'white',
-    lineHeight: 30,
     height: 40,
-    padding: 5,
-    marginTop: 20,
+    padding: 10,
+    marginTop: 30,
+  },
+  loadingButton: {
+    position: 'relative'
+  },
+  loadingIndicator: {
+    position: 'absolute',
+    right: 0,
+    top: 10
+  },
+  buttonText: {
     textAlign: 'center',
+    color: 'white'
   },
   container: {
     flex: 1,
@@ -81,7 +92,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     height: 37,
     marginTop: 20
-  }
+  },
+  errorText: {
+    marginTop: 20,
+    fontSize: 14,
+    alignSelf: 'center',
+    color: 'red',
+    backgroundColor: 'transparent',
+  },
 });
 
 LoginForm.navigationOptions = {

@@ -4,6 +4,8 @@ import { createSwitchNavigator } from 'react-navigation';
 import { createReactNavigationReduxMiddleware, reduxifyNavigator, } from 'react-navigation-redux-helpers';
 import UnauthorizedNavigator from "./UnauthorizedNavigator";
 import AuthorizedNavigator from "./AuthorizedNavigator";
+import * as routes from "../constants/navigation";
+import LoadingScreen from "../containers/LoadingScreen";
 
 const middleware = createReactNavigationReduxMiddleware(
   'root',
@@ -11,8 +13,11 @@ const middleware = createReactNavigationReduxMiddleware(
 );
 
 const RootNavigator = createSwitchNavigator({
-  UnauthorizedNavigation: UnauthorizedNavigator,
-  AuthorizedNavigation: AuthorizedNavigator,
+  [routes.LOADING_SCREEN]: { screen: LoadingScreen },
+  Unauthorized: UnauthorizedNavigator,
+  Authorized: AuthorizedNavigator,
+}, {
+  initialRouteName: routes.LOADING_SCREEN
 });
 
 const AppWithNavigationState = reduxifyNavigator(RootNavigator, 'root');

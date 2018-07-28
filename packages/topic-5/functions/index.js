@@ -6,7 +6,7 @@ const functions = require('firebase-functions'),
 admin.initializeApp(functions.config().firebase);
 
 module.exports = {
-  onCreateUser: auth.createUser,
-  sendEventData: auth.deleteUser,
+  createUser: auth.createUser,
+  deleteUser: auth.deleteUser,
   sendPushNotification: push.sendPushNotification
 };

@@ -10,24 +10,17 @@ export const setUser = user => ({
 
 export const initializeApp = () => dispatch => {
   firebase.auth().onAuthStateChanged(user => {
-    if(!user) {
+    if (!user) {
       dispatch(setUser(null));
       dispatch(StackActions.reset({
         index: 0,
-        actions: [NavigationActions.navigate({ routeName: LOGIN_SCREEN })],
+        actions: [NavigationActions.navigate({routeName: LOGIN_SCREEN})],
       }));
       return;
     }
     console.log(user);
     dispatch(setUser(user.toJSON()));
-    if (user.emailVerified) {
-      dispatch(StackActions.reset({
-        index: 0,
-        actions: [NavigationActions.navigate({ routeName: MAIN_SCREEN })],
-      }));
-    } else {
-      console.log('Email is not verified');
-    }
+    dispatch(NavigationActions.navigate({routeName: MAIN_SCREEN}));
   })
 };
 
@@ -49,9 +42,7 @@ export const signUpNewUser = ({email, password}) => dispatch => {
     .createUserWithEmailAndPassword(email, password)
     .then(user => {
       if (!user.emailVerified) {
-        return user.sendEmailVerification().then((res) => {
-          dispatch(StackActions.push(MAIN_SCREEN));
-        })
+        return user.sendEmailVerification();
       }
       dispatch(StackActions.push(MAIN_SCREEN));
     })

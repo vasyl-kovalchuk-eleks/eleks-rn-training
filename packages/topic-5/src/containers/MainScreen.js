@@ -8,32 +8,20 @@ import { connect } from 'react-redux'
 import * as MESSAGE from '../constants/message'
 import { logout } from "../actions/auth";
 
-class MainScreen extends React.Component {
-  state = { currentUser: null };
-
-  componentDidMount() {
-    const { currentUser } = firebase.auth();
-
-    this.setState({ currentUser })
-  }
-
-  render() {
-    const { currentUser } = this.state;
-
-    return (
-      <View style={styles.container}>
-        <Text>
-          Hi {currentUser && currentUser.email}!
-        </Text>
-        <Button onPress={this.props.logout} title={MESSAGE.LOGOUT}/>
-      </View>
-    )
-  }
-};
-
-MainScreen.navigationOptions = {
-  title: MESSAGE.HOME,
-};
+const MainScreen = ({ user, logout }) => (
+  (
+    <View style={styles.container}>
+      <Text>
+        Hi {user && user.email}!
+        {user.emailVerified
+          ? `Your account have been successfully verified!!!`
+          : `Your account haven't been verified yet! Please check the email to verify account!`
+        }
+      </Text>
+      <Button onPress={logout} title={MESSAGE.LOGOUT}/>
+    </View>
+  )
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -43,8 +31,8 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = () => ({
-
+const mapStateToProps = (state) => ({
+  user: state.auth.user
 });
 
 const mapDispatchToProps = {
