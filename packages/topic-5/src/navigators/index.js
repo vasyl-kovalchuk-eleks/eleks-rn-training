@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createSwitchNavigator } from 'react-navigation';
 import { createReactNavigationReduxMiddleware, reduxifyNavigator, } from 'react-navigation-redux-helpers';
+
 import UnauthorizedNavigator from "./UnauthorizedNavigator";
 import AuthorizedNavigator from "./AuthorizedNavigator";
 import * as routes from "../constants/navigation";

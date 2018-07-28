@@ -7,6 +7,7 @@ import * as MESSAGE from "../constants/message";
 export default createStackNavigator({
   [routes.MAIN_SCREEN]: {
     screen: MainScreen,
+    path: 'mainScreen',
     navigationOptions: {
       title: MESSAGE.HOME,
     },
