@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createSwitchNavigator } from 'react-navigation';
 import {
   reduxifyNavigator,
   createReactNavigationReduxMiddleware,
@@ -8,6 +8,7 @@ import {
 
 import LoginScreen from '../components/LoginScreen';
 import MainScreen from '../components/MainScreen';
+import MainScreen2 from '../components/MainScreen2';
 import ProfileScreen from '../components/ProfileScreen';
 
 const middleware = createReactNavigationReduxMiddleware(
@@ -15,11 +16,24 @@ const middleware = createReactNavigationReduxMiddleware(
   state => state.nav
 );
 
-const RootNavigator = createStackNavigator({
+const MainNavigator = createStackNavigator({
   Login: { screen: LoginScreen },
   Main: { screen: MainScreen },
   Profile: { screen: ProfileScreen },
+}, {
+  initialRouteName: "Main"
 });
+
+const RootNavigator = createSwitchNavigator({
+  App: MainNavigator,
+  Main2: createStackNavigator({
+    Main2: {
+      screen: MainScreen2
+    }
+  })
+});
+
+
 
 const AppWithNavigationState = reduxifyNavigator(RootNavigator,'root');
 

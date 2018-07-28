@@ -1,29 +1,18 @@
 import { combineReducers } from 'redux';
-import { NavigationActions } from 'react-navigation';
+import { NavigationActions, StackActions } from 'react-navigation';
 
 import { RootNavigator } from '../navigators/AppNavigator';
 
-// Start with two routes: The Main screen, with the Login screen on top.
-const firstAction = RootNavigator.router.getActionForPathAndParams('Main');
-const tempNavState = RootNavigator.router.getStateForAction(firstAction);
-const secondAction = RootNavigator.router.getActionForPathAndParams('Login');
-const initialNavState = RootNavigator.router.getStateForAction(
-  secondAction,
-  tempNavState
-);
-
-function nav(state = initialNavState, action) {
+function nav(state, action) {
   let nextState;
   switch (action.type) {
     case 'Login':
-      nextState = RootNavigator.router.getStateForAction(
-        NavigationActions.back(),
-        state
-      );
-      break;
     case 'Logout':
       nextState = RootNavigator.router.getStateForAction(
-        NavigationActions.navigate({ routeName: 'Login' }),
+        StackActions.reset({
+          index: 0,
+          actions: [StackActions.push({routeName: "Main"})]
+        }),
         state
       );
       break;
