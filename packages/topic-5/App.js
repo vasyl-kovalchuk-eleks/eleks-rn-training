@@ -1,4 +1,5 @@
 import React from 'react';
+import { YellowBox } from 'react-native'
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import { Provider } from 'react-redux';
@@ -13,8 +14,6 @@ const middlewares = [
 ];
 
 if (__DEV__) {
-  console.ignoredYellowBox = ['Setting a timer'];
-  // eslint-disable-next-line
   const logger = createLogger({
     duration: true,
     collapsed: true,
