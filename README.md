@@ -9,7 +9,7 @@ By the end of the this courses, you’ll be able to build professional Android a
 
 ## Table of contents
 
-* [Introduction and Getting Started]
+* [Introduction and Getting Started] [Slides](https://docs.google.com/presentation/d/1h8LfTcFmmiNogseH_RDjudrmvf4Ez1a0n4z8GsjH84Y/edit?usp=sharing)
     
 ## Examples and Sources
 * [React Native Blueprints](https://github.com/PacktPublishing/React-Native-Blueprints)
