@@ -10,6 +10,11 @@ By the end of the this courses, you’ll be able to build professional Android a
 ## Table of contents
 
 * [Introduction and Getting Started]
+** Welcome
+** Is this course for you?
+** Course overview
+** Why React Native?
+** Requirement and setup
     
 ## Examples and Sources
 * [React Native Blueprints](https://github.com/PacktPublishing/React-Native-Blueprints)
@@ -18,5 +23,6 @@ By the end of the this courses, you’ll be able to build professional Android a
 * [React Native - Building Mobile Apps with JavaScript](https://www.packtpub.com/application-development/react-native-building-mobile-apps-javascript?utm_source=GitHub&utm_medium=repo&utm_campaign=9781787282537)
 
 * [Getting Started with React Native](https://www.packtpub.com/application-development/getting-started-react-native?utm_source=GitHub&utm_medium=repo&utm_campaign=9781785885181)
+* [React Native: примеры, компоненты, туториалы и книги](https://apptractor.ru/info/articles/react-native-primeryi-komponentyi-tutorialyi-i-knigi.html)
 
-[Introduction and Getting Started]: packages/RN-lecture-1/README.md
+[Introduction and Getting Started]: packages/module-1/README.md
