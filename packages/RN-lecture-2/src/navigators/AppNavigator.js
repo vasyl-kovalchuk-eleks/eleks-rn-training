@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createStackNavigator, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator, createSwitchNavigator, createTabNavigator } from 'react-navigation';
 import {
   reduxifyNavigator,
   createReactNavigationReduxMiddleware,
@@ -9,7 +9,8 @@ import {
 import LoginScreen from '../components/LoginScreen';
 import MainScreen from '../components/MainScreen';
 import MainScreen2 from '../components/MainScreen2';
-import ProfileScreen from '../components/ProfileScreen';
+import ProfileTab1Screen from '../components/profile/ProfileTab1Screen';
+import ProfileTab2Screen from '../components/profile/ProfileTab2Screen';
 
 const middleware = createReactNavigationReduxMiddleware(
   'root',
@@ -17,9 +18,22 @@ const middleware = createReactNavigationReduxMiddleware(
 );
 
 const MainNavigator = createStackNavigator({
-  Login: { screen: LoginScreen },
-  Main: { screen: MainScreen },
-  Profile: { screen: ProfileScreen },
+  Login: {screen: LoginScreen},
+  Main: {screen: MainScreen},
+  Profile: {
+    screen: createTabNavigator({
+      ProfileTab1: {
+        screen: ProfileTab1Screen
+      },
+      ProfileTab2: {
+        screen: ProfileTab2Screen
+      }
+    }),
+    navigationOptions: {
+      title: "Profile"
+    }
+
+  },
 }, {
   initialRouteName: "Main"
 });
@@ -34,8 +48,7 @@ const RootNavigator = createSwitchNavigator({
 });
 
 
-
-const AppWithNavigationState = reduxifyNavigator(RootNavigator,'root');
+const AppWithNavigationState = reduxifyNavigator(RootNavigator, 'root');
 
 const mapStateToProps = state => ({
   state: state.nav,
