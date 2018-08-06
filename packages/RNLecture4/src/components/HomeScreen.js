@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  offsetTop: {
+    marginTop: 15
+  }
 });
 
 const HomeScreen = ({ navigation }) => (
@@ -21,10 +24,19 @@ const HomeScreen = ({ navigation }) => (
     <Text style={ styles.welcome }>
       Hello word!
     </Text>
-    <Button
-      onPress={ () => navigation.navigate('TouchIDAuthentication') }
-      title="Face ID/Touch ID authentication"
-    />
+    <View style={ styles.offsetTop }>
+      <Button
+        style={ styles.offsetTop }
+        onPress={ () => navigation.navigate('TouchIDAuthentication') }
+        title="Face ID/Touch ID authentication"
+      />
+    </View>
+    <View style={ styles.offsetTop }>
+      <Button
+        onPress={ () => navigation.navigate('NFCManager') }
+        title="NFC Manager"
+      />
+    </View>
   </View>
 );
 
