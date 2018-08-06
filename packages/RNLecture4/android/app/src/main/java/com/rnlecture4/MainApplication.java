@@ -3,6 +3,7 @@ package com.rnlecture4;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.zmxv.RNSound.RNSoundPackage;
 import org.reactnative.camera.RNCameraPackage;
 import community.revteltech.nfc.NfcManagerPackage;
 import com.rnfingerprint.FingerprintAuthPackage;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNSoundPackage(),
             new RNCameraPackage(),
             new NfcManagerPackage(),
             new FingerprintAuthPackage(),

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     flex: 0,
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: 200,
+    height: 250,
   },
   welcome: {
     fontSize: 20,
@@ -29,10 +29,6 @@ const HomeScreen = ({ navigation }) => (
     </Text>
     <View style={styles.buttonsContainer}>
       <Button
-        onPress={ () => navigation.navigate('Camera') }
-        title="Camera"
-      />
-      <Button
         onPress={ () => navigation.navigate('NFCManager') }
         title="NFC Manager"
       />
@@ -41,8 +37,16 @@ const HomeScreen = ({ navigation }) => (
         title="Face ID/Touch ID authentication"
       />
       <Button
+        onPress={ () => navigation.navigate('Camera') }
+        title="Camera"
+      />
+      <Button
         onPress={ () => navigation.navigate('Sensors') }
-        title="Sensors Manager"
+        title="Sensors"
+      />
+      <Button
+        onPress={ () => navigation.navigate('Sound') }
+        title="Sound"
       />
     </View>
   </View>

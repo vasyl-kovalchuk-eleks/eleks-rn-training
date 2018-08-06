@@ -6,6 +6,7 @@ import TouchIDAuthenticationScreen from '../components/TouchIDAuthenticationScre
 import NFCManagerScreen from '../components/NFCManagerScreen';
 import CameraScreen from '../components/CameraScreen';
 import SensorsScreen from '../components/SensorsScreen';
+import SoundScreen from '../components/SoundScreen';
 
 export const AppNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
@@ -13,6 +14,7 @@ export const AppNavigator = createStackNavigator({
   NFCManager: { screen: NFCManagerScreen },
   Camera: { screen: CameraScreen },
   Sensors: { screen: SensorsScreen },
+  Sound: { screen: SoundScreen },
 }, {
   initialRouteName: "Home"
 });
