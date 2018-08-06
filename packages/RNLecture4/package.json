@@ -7,10 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "react": "16.4.1",
     "react-native": "0.56.0",
     "react-native-camera": "^1.1.4",
     "react-native-nfc-manager": "^0.5.3",
+    "react-native-sensor-manager": "^0.1.10",
     "react-native-touch-id": "^4.0.4",
     "react-navigation": "^2.9.3"
   },

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     flex: 0,
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: 150,
+    height: 200,
   },
   welcome: {
     fontSize: 20,
@@ -39,6 +39,10 @@ const HomeScreen = ({ navigation }) => (
       <Button
         onPress={ () => navigation.navigate('TouchIDAuthentication') }
         title="Face ID/Touch ID authentication"
+      />
+      <Button
+        onPress={ () => navigation.navigate('Sensors') }
+        title="Sensors Manager"
       />
     </View>
   </View>
