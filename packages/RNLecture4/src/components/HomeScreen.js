@@ -37,6 +37,12 @@ const HomeScreen = ({ navigation }) => (
         title="NFC Manager"
       />
     </View>
+    <View style={ styles.offsetTop }>
+      <Button
+        onPress={ () => navigation.navigate('Camera') }
+        title="Camera"
+      />
+    </View>
   </View>
 );
 
