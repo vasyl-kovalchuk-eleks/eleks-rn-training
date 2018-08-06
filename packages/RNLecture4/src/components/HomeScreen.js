@@ -9,38 +9,36 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  buttonsContainer: {
+    flex: 0,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: 150,
+  },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
-  offsetTop: {
-    marginTop: 15
-  }
 });
 
 const HomeScreen = ({ navigation }) => (
   <View style={ styles.container }>
     <Text style={ styles.welcome }>
-      Hello word!
+      Welcome Lecture 4
     </Text>
-    <View style={ styles.offsetTop }>
+    <View style={styles.buttonsContainer}>
       <Button
-        style={ styles.offsetTop }
-        onPress={ () => navigation.navigate('TouchIDAuthentication') }
-        title="Face ID/Touch ID authentication"
+        onPress={ () => navigation.navigate('Camera') }
+        title="Camera"
       />
-    </View>
-    <View style={ styles.offsetTop }>
       <Button
         onPress={ () => navigation.navigate('NFCManager') }
         title="NFC Manager"
       />
-    </View>
-    <View style={ styles.offsetTop }>
       <Button
-        onPress={ () => navigation.navigate('Camera') }
-        title="Camera"
+        onPress={ () => navigation.navigate('TouchIDAuthentication') }
+        title="Face ID/Touch ID authentication"
       />
     </View>
   </View>
