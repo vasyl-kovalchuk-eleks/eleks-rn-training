@@ -35,10 +35,25 @@ class NFCManagerScreen extends PureComponent {
       });
   }
 
+  componentWillUnmount() {
+    NfcManager.stop();
+  }
+
   onClickStartNFC = () => {
-    NfcManager.registerTagEvent(tag => {
-      this.setState({ status: `Tag Discovered: ${tag}` });
-    });
+    NfcManager.start({
+      onSessionClosedIOS: () => {
+        this.setState({ status: 'ios session closed' });
+      }
+    })
+      .then(result => {
+        this.setState({ status: `Server is runing: ${result}` });
+        NfcManager.registerTagEvent(tag => {
+          this.setState({ status: `Tag Discovered: ${tag}` });
+        });
+      })
+      .catch(error => {
+        this.setState({ error: `Support error: ${ error.message}` });
+      })
   };
 
   render() {
