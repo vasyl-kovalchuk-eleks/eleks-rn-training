@@ -1,14 +1,13 @@
 import React from 'react'
 import { NavigationActions, StackActions } from 'react-navigation'
 import { Button, Image, Platform, StyleSheet, Text, View } from 'react-native'
-import firebase from 'react-native-firebase';
 
 import { connect } from 'react-redux'
 
 import * as MESSAGE from '../constants/message'
 import { logout } from "../actions/auth";
 
-const MainScreen = ({ user, logout }) => (
+const HomeScreen = ({ user, logout }) => (
   (
     <View style={styles.container}>
       <Text>
@@ -39,4 +38,4 @@ const mapDispatchToProps = {
   logout
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)

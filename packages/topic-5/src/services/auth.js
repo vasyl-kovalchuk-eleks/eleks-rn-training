@@ -22,7 +22,7 @@ export const signIn = (email, password) =>
 
 export const logout = () => firebase.auth().signOut();
 
-export const listenStateChange = onUserChange => firebase.auth().onAuthStateChanged(onUserChange);
+export const onAuthStateChanged = onUserChange => firebase.auth().onAuthStateChanged(onUserChange);
 
 export const requestAndSaveUserPushToken = userId =>
   firebaseMessaging.hasPermission()

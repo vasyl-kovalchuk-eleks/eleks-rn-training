@@ -1,18 +1,25 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
-import { createDrawerNavigator } from "react-navigation";
+import { createStackNavigator, createTabNavigator } from "react-navigation";
 import ProfileScreen from "../containers/ProfileScreen";
 import * as routes from "../constants/navigation";
-import MainScreen from "../containers/MainScreen";
+import HomeTabScreen from "../containers/HomeTabScreen";
+import TopicsTabScreen from "../containers/TopicsTabScreen";
 import * as MESSAGE from "../constants/message";
 
-export default createDrawerNavigator({
+export default createStackNavigator({
   [routes.MAIN_SCREEN]: {
-    screen: MainScreen,
-    path: 'mainScreen',
+    screen: createTabNavigator({
+      [routes.HOME_TAB_SCREEN]: {
+        screen: HomeTabScreen
+      },
+      [routes.TOPICS_TAB_SCREEN]: {
+        screen: TopicsTabScreen
+      }
+    }),
     navigationOptions: {
-      drawerLabel: MESSAGE.HOME,
-    },
+      header: null
+    }
   },
   [routes.PROFILE_SCREEN]: {
     screen: ProfileScreen,

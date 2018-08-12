@@ -1,6 +1,6 @@
 import { NavigationActions, StackActions } from "react-navigation";
 
-import * as firebaseService from "../services/firebase";
+import * as firebaseService from "../services/auth";
 
 import { LOGIN_SCREEN, MAIN_SCREEN } from "../constants/navigation";
 import { AUTH_LOGIN_SUCCESS, AUTH_LOGOUT, AUTH_SET_USER } from "../constants/actionTypes";
@@ -10,21 +10,18 @@ export const setUser = user => ({
   payload: user
 });
 
-export const initializeApp = () => dispatch => {
-  firebaseService.listenStateChange(user => {
-    if(!user) {
-      dispatch(setUser(null));
-      dispatch(StackActions.reset({
-        index: 0,
-        actions: [NavigationActions.navigate({routeName: LOGIN_SCREEN})],
-      }));
-      return;
-    }
-    console.log(user);
-    dispatch(setUser(user.toJSON()));
-    dispatch(NavigationActions.navigate({routeName: MAIN_SCREEN}));
-  })
-};
+export const onAuthStateChanged = () => dispatch => firebaseService.onAuthStateChanged(user => {
+  if(!user) {
+    dispatch(setUser(null));
+    dispatch(StackActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({routeName: LOGIN_SCREEN})],
+    }));
+    return;
+  }
+  dispatch(setUser(user.toJSON()));
+  dispatch(NavigationActions.navigate({routeName: MAIN_SCREEN}));
+});
 
 export const login = ({email, password}) => dispatch => {
   return firebaseService.signIn(email, password)

@@ -6,7 +6,7 @@ import { createReactNavigationReduxMiddleware, reduxifyNavigator, } from 'react-
 import AuthStack from "./AuthStack";
 import AppStack from "./AppStack";
 import * as routes from "../constants/navigation";
-import LoadingScreen from "../containers/LoadingScreen";
+import AuthLoadingScreen from "../containers/AuthLoadingScreen";
 
 const middleware = createReactNavigationReduxMiddleware(
   'root',
@@ -14,7 +14,7 @@ const middleware = createReactNavigationReduxMiddleware(
 );
 
 const RootNavigator = createSwitchNavigator({
-  [routes.AUTH_LOADING_SCREEN]: {screen: LoadingScreen},
+  [routes.AUTH_LOADING_SCREEN]: {screen: AuthLoadingScreen},
   Auth: AuthStack,
   App: AppStack,
 }, {

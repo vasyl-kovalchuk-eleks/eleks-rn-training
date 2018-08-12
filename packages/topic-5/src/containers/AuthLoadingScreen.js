@@ -3,11 +3,19 @@ import React from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import { connect } from 'react-redux'
 
-import { initializeApp } from "../actions/auth";
+import { onAuthStateChanged } from "../actions/auth";
 
-class LoadingScreen extends React.Component {
+class AuthLoadingScreen extends React.Component {
   componentDidMount() {
-    this.props.initializeApp();
+    const { onAuthStateChanged } = this.props;
+
+    // Add listener here
+    this.unsubscribe = onAuthStateChanged();
+  }
+
+  componentWillUnmount() {
+    // Don't forget to unsubscribe when the component unmounts
+    this.unsubscribe();
   }
 
   render() {
@@ -21,10 +29,10 @@ class LoadingScreen extends React.Component {
 }
 
 const mapDispatchToProps = {
-  initializeApp
+  onAuthStateChanged
 };
 
-LoadingScreen.navigationOptions = {
+AuthLoadingScreen.navigationOptions = {
   header: null
 };
 
@@ -36,4 +44,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(null, mapDispatchToProps)(LoadingScreen);
+export default connect(null, mapDispatchToProps)(AuthLoadingScreen);
