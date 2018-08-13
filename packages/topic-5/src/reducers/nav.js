@@ -11,10 +11,7 @@ function nav(state = initNavState, action = {}) {
   switch (action.type) {
     case AUTH_LOGIN_SUCCESS:
       nextState = RootNavigator.router.getStateForAction(
-        StackActions.reset({
-          index: 0,
-          actions: [NavigationActions.navigate({ routeName: MAIN_SCREEN })],
-        }),
+        NavigationActions.navigate({ routeName: MAIN_SCREEN }),
         state
       );
       break;

@@ -36,6 +36,10 @@ export const logout = () => dispatch => {
     .then(() => dispatch({type: AUTH_LOGOUT}))
 };
 
-export const signUpNewUser = ({email, password}) => () => {
-  return firebaseService.createUser(email, password);
+export const signUpNewUser = ({email, password}) => dispatch => {
+  return firebaseService.createUser(email, password).then(user => {
+    dispatch(setUser(user.toJSON()));
+    dispatch({type: AUTH_LOGIN_SUCCESS});
+    return user;
+  });
 };

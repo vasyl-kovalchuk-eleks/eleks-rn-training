@@ -8,7 +8,7 @@ export default class Logo extends Component {
     return (
       <View style={styles.container}>
         <Image source={logoImg} style={styles.image} />
-        <Text style={styles.text}>REACT NATIVE</Text>
+        <Text style={styles.text}>REACT NATIVE TRAINING</Text>
       </View>
     );
   }
@@ -16,7 +16,7 @@ export default class Logo extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 3,
+    padding: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },

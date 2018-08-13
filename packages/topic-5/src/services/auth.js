@@ -10,10 +10,14 @@ export const createUser = (email, password) =>
     .createUserAndRetrieveDataWithEmailAndPassword(email, password)
     .then(({user}) => {
       if (!user.emailVerified) {
-        user.sendEmailVerification();
+        return user.sendEmailVerification().then(() => {
+          return requestAndSaveUserPushToken(user.uid).then(() => {
+            return user;
+          });
+        });
       }
 
-      requestAndSaveUserPushToken(user.uid);
+      return user;
     });
 
 export const signIn = (email, password) =>

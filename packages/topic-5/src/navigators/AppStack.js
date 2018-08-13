@@ -5,22 +5,23 @@ import ProfileScreen from "../containers/ProfileScreen";
 import * as routes from "../constants/navigation";
 import HomeTabScreen from "../containers/HomeTabScreen";
 import TopicsTabScreen from "../containers/TopicsTabScreen";
-import * as MESSAGE from "../constants/message";
+
+const MainScreen = {
+  screen: createTabNavigator({
+    [routes.HOME_TAB_SCREEN]: {
+      screen: HomeTabScreen
+    },
+    [routes.TOPICS_TAB_SCREEN]: {
+      screen: TopicsTabScreen
+    }
+  }),
+  navigationOptions: {
+    header: null
+  }
+};
 
 export default createStackNavigator({
-  [routes.MAIN_SCREEN]: {
-    screen: createTabNavigator({
-      [routes.HOME_TAB_SCREEN]: {
-        screen: HomeTabScreen
-      },
-      [routes.TOPICS_TAB_SCREEN]: {
-        screen: TopicsTabScreen
-      }
-    }),
-    navigationOptions: {
-      header: null
-    }
-  },
+  [routes.MAIN_SCREEN]: MainScreen,
   [routes.PROFILE_SCREEN]: {
     screen: ProfileScreen,
     navigationOptions: {

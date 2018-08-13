@@ -21,46 +21,38 @@ const LoginForm = props => {
   const { handleSubmit, onSubmit, submitting, invalid, onSignUpPress, submitFailed, error } = props;
 
   return (
-    <KeyboardAvoidingView behavior="padding" style={styles.container}>
-      <FormLabel>Email</FormLabel>
-      <Field
-        autoFocus
-        name="email"
-        placeholder='Enter Email'
-        placeholderTextColor='grey'
-        component={renderInput}
-        testID="email"
-        accessibilityLabel="email"
-        validate={required}
-      />
-      <FormLabel>Password</FormLabel>
-      <Field
-        autoFocus
-        name="password"
-        placeholder='Enter Password'
-        component={renderInput}
-        testID="password"
-        accessibilityLabel="password"
-        autoCapitalize="none"
-        validate={required}
-        returnKeyType={'done'}
-        autoCorrect={false}
-        leftIcon={
-          <Icon
-            name='lock'
-            color='rgba(171, 189, 219, 1)'
-            size={25}
-          />
-        }
-        containerStyle={{marginVertical: 10}}
-        onChangeText={(password) => this.setState({password})}
-        inputStyle={{marginLeft: 10, color: 'white'}}
-        secureTextEntry={true}
-        keyboardAppearance="light"
-        keyboardType="default"
-        blurOnSubmit={true}
-        placeholderTextColor="white"
-      />
+    <View style={styles.container}>
+      <View style={{flexDirection: 'column', alignItems: 'flex-start'}}>
+        <FormLabel labelStyle={styles.formLabel}>Email</FormLabel>
+        <Field
+          autoFocus
+          name="email"
+          component={renderInput}
+          testID="email"
+          accessibilityLabel="email"
+          validate={required}
+        />
+        <FormLabel labelStyle={styles.formLabel}>Password</FormLabel>
+        <Field
+          autoFocus
+          name="password"
+          placeholder='Enter Password'
+          component={renderInput}
+          testID="password"
+          accessibilityLabel="password"
+          autoCapitalize="none"
+          validate={required}
+          returnKeyType={'done'}
+          autoCorrect={false}
+          containerStyle={{marginVertical: 10}}
+          inputStyle={{marginLeft: 10, color: 'white'}}
+          secureTextEntry={true}
+          keyboardAppearance="light"
+          keyboardType="default"
+          blurOnSubmit={true}
+          placeholderTextColor="white"
+        />
+      </View>
 
       <View style={{flex: 1, flexDirection: 'column',} }>
         <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
@@ -79,14 +71,13 @@ const LoginForm = props => {
         </View>
         {submitFailed && <Text style={[styles.errorText]}>{error}</Text>}
       </View>
-    </KeyboardAvoidingView>
+    </View>
   )
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center'
+    flex: 1
   },
   button: {
     width: 100,
@@ -105,6 +96,10 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
+    color: 'white'
+  },
+
+  formLabel: {
     color: 'white'
   },
   input: {

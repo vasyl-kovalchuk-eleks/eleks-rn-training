@@ -17,7 +17,7 @@ exports.createUser = functions.auth.user().onCreate(user => {
     photoUrl: user.photoURL,
   };
 
-  return admin.database().ref(`/users/${user.uid}`).set(userObject);
+  return admin.database().ref(`/users/${user.uid}`).update(userObject);
 });
 // [END createUser]
 
