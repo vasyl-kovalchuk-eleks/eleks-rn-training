@@ -41,3 +41,4 @@ react-native run-android
 [Introduction and Getting Started]: packages/topic1/README.md
 [React Navigation]: packages/topic2/README.md
 [Diving into Basics]: packages/topic3/README.md
+[React Native Modules]: packages/topic4/README.md
