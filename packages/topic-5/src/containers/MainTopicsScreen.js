@@ -1,14 +1,15 @@
 import React from 'react'
 import { StackActions } from 'react-navigation'
-import { Button, StyleSheet, Text, View, ActivityIndicator, Dimensions, Text } from 'react-native'
+import { Dimensions, StyleSheet, Text, View } from 'react-native'
 import { List, ListItem } from 'react-native-elements'
 
 import { connect } from 'react-redux'
-import firebase from 'react-native-firebase'
+import firebase from 'react-native-firebase';
 
 import { fetchTopics } from "../actions/topics";
-import { showNewMessage, setNotificationData } from "../actions/notifications";
+import { setNotificationData, showNewMessage } from "../actions/notifications";
 import * as routes from "../constants/navigation";
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class MainTopicsScreen extends React.Component {
@@ -19,7 +20,7 @@ class MainTopicsScreen extends React.Component {
   componentDidMount() {
     this.props.fetchTopics();
     this.messageListener = firebase.notifications()
-      .onNotification(({body, title}) => this.props.setNotificationData({body, title}));
+      .onNotification(({ body, title }) => this.props.setNotificationData({ body, title }));
   }
 
   componentWillUnmount() {
@@ -27,7 +28,7 @@ class MainTopicsScreen extends React.Component {
   }
 
   render() {
-    const { topics, loading, onTopicPress } = this.props;
+    const { topics, onTopicPress, newNotification, showNewMessage } = this.props;
     return (
       <View style={styles.container}>
         <List containerStyle={styles.listContainer}>
@@ -36,7 +37,7 @@ class MainTopicsScreen extends React.Component {
               <ListItem
                 style={styles.listItem}
                 roundAvatar
-                avatar={{uri: topic.avatar_url}}
+                avatar={{ uri: topic.avatar_url }}
                 key={topic.seq}
                 title={topic.lecturer}
                 onPress={() => onTopicPress(topic.seq)}
@@ -44,8 +45,8 @@ class MainTopicsScreen extends React.Component {
             ))
           }
         </List>
-        {this.props.newNotification && <Text style={{color: 'red', fontSize: 18,  }} onPress={this.props.showNewMessage}>{'You have new notification!!'}</Text>}
-    </View>)
+        {newNotification && <Text style={{ color: 'red', fontSize: 18, }} onPress={showNewMessage}>{'You have new notification!!'}</Text>}
+      </View>)
   }
 }
 
@@ -81,7 +82,7 @@ const mapDispatchToProps = (dispatch) => ({
       }
     }))
   },
-  showNewMessage: ()=> dispatch(showNewMessage()),
+  showNewMessage: () => dispatch(showNewMessage()),
   setNotificationData: params => dispatch(setNotificationData(params)),
 
 });

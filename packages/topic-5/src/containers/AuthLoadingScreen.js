@@ -44,4 +44,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthLoadingScreen);
+export default connect(null, mapDispatchToProps)(AuthLoadingScreen);
