@@ -28,6 +28,7 @@ react-native run-android
 * [Introduction and Getting Started]  [Slides](https://docs.google.com/presentation/d/1h8LfTcFmmiNogseH_RDjudrmvf4Ez1a0n4z8GsjH84Y/edit?usp=sharing)
 * [React Navigation]  [Slides](https://drive.google.com/file/d/1xUHkQXbsHudDY_K3JdOXKy5E8_gUbbLI/view)
 * [Diving into Basics]  [Slides](https://docs.google.com/presentation/d/1WZkiq7HFV1_JF5-ve6zF-FdOLPbBuVKHgrph0vCKyoE/edit?usp=sharing)
+* [React Native Modules]  [Slides](https://docs.google.com/presentation/d/1rJP60x9PXwzGwYil7Q3XMoCax0WRlXYvEwq758Yap2g/edit?usp=sharing)
     
 ## Examples and Sources
 * [React Native Blueprints](https://github.com/PacktPublishing/React-Native-Blueprints)
@@ -41,3 +42,4 @@ react-native run-android
 [Introduction and Getting Started]: packages/topic1/README.md
 [React Navigation]: packages/topic2/README.md
 [Diving into Basics]: packages/topic3/README.md
+[React Native Modules]: packages/topic4/README.md
