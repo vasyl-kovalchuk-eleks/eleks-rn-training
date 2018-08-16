@@ -29,7 +29,7 @@ class AuthLoadingScreen extends React.Component {
 }
 
 const mapDispatchToProps = {
-  onAuthStateChanged
+  onAuthStateChanged,
 };
 
 AuthLoadingScreen.navigationOptions = {
@@ -44,4 +44,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(null, mapDispatchToProps)(AuthLoadingScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthLoadingScreen);
