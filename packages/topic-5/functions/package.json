@@ -1,0 +1,16 @@
+{
+  "name": "auth-register-functions",
+  "version": "1.0.0",
+  "description": "Send an email on register new user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vasyl Kovalchuk",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^5.13.1",
+    "firebase-functions": "^2.0.0",
+    "nodemailer": "^4.6.7"
+  }
+}

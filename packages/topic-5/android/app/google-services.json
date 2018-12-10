@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "334795869329",
+    "firebase_url": "https://eleks-rn-training.firebaseio.com",
+    "project_id": "eleks-rn-training",
+    "storage_bucket": "eleks-rn-training.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334795869329:android:c8b3a03655cdf8f8",
+        "android_client_info": {
+          "package_name": "com.eleks.rntrainingtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334795869329-2ul08mf25ipu1qi2rk1mngienhdl0d11.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrdqR13JmObrf6aMKd6CncUHRnod5VpTY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
